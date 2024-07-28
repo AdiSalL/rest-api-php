@@ -65,10 +65,10 @@ class Post {
     }
 
     public function create(){
-        $query = "INSERT INTO SET posts title = :title, 
-        body = :body,
-        author = :author,
-        category_id = :category_id,";
+        $query = "INSERT INTO posts  (title, body, author, category_id) VALUES (:title, 
+        :body,
+        :author,
+        :category_id)";
 
         $stmt = $this->conn->prepare($query);
 
